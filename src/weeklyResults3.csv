@@ -1,0 +1,37 @@
+week,matchId,player1,player2,player3,player4,team1Score,team2Score
+2,1,Senthil,Madhu,Madhusudhan,Tanmai,21,18
+2,2,Arun,Sathish,Rex,Santhosh,19,21
+2,3,Poovarasan,Gopi,Vijay,Ganesh,21,17
+2,4,Nagendra,Arun Kalaivanan,Srinath,Senthil I,16,21
+2,5,Senthil,Madhusudhan,Arun,Rex,21,19
+2,6,Madhu,Tanmai,Sathish,Santhosh,18,21
+2,7,Poovarasan,Vijay,Nagendra,Srinath,21,16
+2,8,Gopi,Ganesh,Arun Kalaivanan,Senthil I,20,21
+2,9,Senthil,Arun,Srinath,Ganesh,21,15
+2,10,Madhusudhan,Sathish,Poovarasan,Nagendra,17,21
+2,11,Madhu,Gopi,Vijay,Senthil I,21,19
+2,12,Tanmai,Poovarasan,Arun Kalaivanan,Rex,18,21
+2,13,Santhosh,Vijay,Senthil,Srinath,21,16
+2,14,Ganesh,Nagendra,Madhu,Arun,17,21
+2,15,Rex,Gopi,Sathish,Arun Kalaivanan,21,18
+2,16,Senthil I,Poovarasan,Tanmai,Ganesh,19,21
+2,17,Arun,Srinath,Madhusudhan,Vijay,21,20
+2,18,Madhu,Santhosh,Nagendra,Gopi,18,21
+3,1,Senthil,Gopi,Madhusudhan,Nagendra,21,17
+3,2,Madhu,Vijay,Tanmai,Ganesh,19,21
+3,3,Arun,Santhosh,Sathish,Senthil I,21,16
+3,4,Rex,Poovarasan,Arun Kalaivanan,Srinath,18,21
+3,5,Senthil,Madhu,Arun,Arun Kalaivanan,21,19
+3,6,Madhusudhan,Tanmai,Rex,Gopi,17,21
+3,7,Sathish,Ganesh,Poovarasan,Nagendra,21,18
+3,8,Vijay,Srinath,Santhosh,Senthil I,20,21
+3,9,Senthil,Poovarasan,Vijay,Rex,21,15
+3,10,Madhu,Sathish,Gopi,Santhosh,18,21
+3,11,Tanmai,Arun Kalaivanan,Madhusudhan,Srinath,21,19
+3,12,Arun,Gopi,Nagendra,Senthil I,17,21
+3,13,Rex,Vijay,Senthil,Ganesh,21,16
+3,14,Poovarasan,Santhosh,Madhu,Nagendra,19,21
+3,15,Ganesh,Srinath,Tanmai,Sathish,21,18
+3,16,Nagendra,Senthil I,Arun,Poovarasan,18,21
+3,17,Arun Kalaivanan,Madhusudhan,Gopi,Vijay,21,20
+3,18,Srinath,Senthil,Rex,Santhosh,19,21
