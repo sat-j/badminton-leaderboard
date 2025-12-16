@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Papa from 'papaparse'
+import type { ParseResult } from 'papaparse'
 import { supabase } from '../supabaseClient'
 import { updateDoublesMatch } from '../trueskill'
 
@@ -39,7 +40,7 @@ export function MatchCsvUpload() {
     Papa.parse<MatchRow>(file, {
       header: true,
       skipEmptyLines: true,
-      complete: async (results) => {
+      complete: async (results: ParseResult<MatchRow>) => {
         try {
           const rows = results.data
           for (const row of rows) {

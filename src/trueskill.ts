@@ -1,6 +1,4 @@
-import { TrueSkill, Rating, rate } from 'ts-trueskill'
-
-const env = new TrueSkill()
+import { Rating, rate } from 'ts-trueskill'
 
 export type PlayerRating = { mu: number; sigma: number }
 
