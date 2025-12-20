@@ -193,7 +193,10 @@ export function MatchCsvUpload() {
       rating: p.mu - 3 * p.sigma,
       matches_played: p.matches_played,
       wins: p.wins,
+      points_for: p.points_for,
+      points_against: p.points_against,
     }))
+
 
     const topPlayers = enriched
       .sort((a, b) => b.rating - a.rating)
@@ -210,6 +213,16 @@ export function MatchCsvUpload() {
         winRate: p.matches_played ? p.wins / p.matches_played : 0,
       }))
       .sort((a, b) => b.winRate - a.winRate)[0]
+    
+    const mostPoints = enriched.reduce((best, p) =>
+      p.points_for > best.points_for ? p : best
+    , enriched[0])
+
+    const leastPointsAgainst = enriched
+      .filter((p) => p.matches_played > 0)
+      .reduce((best, p) =>
+        p.points_against < best.points_against ? p : best
+      , enriched[0])
 
     const stats = {
       mostMatches: {
@@ -222,6 +235,18 @@ export function MatchCsvUpload() {
             id: bestWinRate.id,
             name: bestWinRate.name,
             winRate: bestWinRate.winRate,
+          }
+        : null,
+      mostPoints: {
+        id: mostPoints.id,
+        name: mostPoints.name,
+        points: mostPoints.points_for,
+      },
+      leastPointsAgainst: leastPointsAgainst
+        ? {
+            id: leastPointsAgainst.id,
+            name: leastPointsAgainst.name,
+            pointsAgainst: leastPointsAgainst.points_against,
           }
         : null,
     }
