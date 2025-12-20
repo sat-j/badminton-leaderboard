@@ -5,14 +5,15 @@ import { supabase } from '../supabaseClient'
 import { updateDoublesMatch } from '../trueskill'
 
 type MatchRow = {
-  week: string
-  matchId: string
-  player1: string
-  player2: string
-  player3: string
-  player4: string
-  team1Score: string
-  team2Score: string
+  id: string
+  week: number
+  team1_score: number
+  team2_score: number
+  winner_team: 1 | 2
+  player1: { name: string } | null
+  player2: { name: string } | null
+  player3: { name: string } | null
+  player4: { name: string } | null
 }
 
 type PlayerRow = {

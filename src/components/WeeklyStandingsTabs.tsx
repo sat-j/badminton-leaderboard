@@ -54,11 +54,12 @@ export function WeeklyStandingsTabs() {
     team1_score: number
     team2_score: number
     winner_team: 1 | 2
-    player1: { name: string }[] | null
-    player2: { name: string }[] | null
-    player3: { name: string }[] | null
-    player4: { name: string }[] | null
+    player1: { name: string } | null
+    player2: { name: string } | null
+    player3: { name: string } | null
+    player4: { name: string } | null
   }
+
 
   const [matches, setMatches] = useState<MatchRow[]>([])
 
@@ -68,8 +69,7 @@ export function WeeklyStandingsTabs() {
       const week = weeks[currentWeekIndex].week
       const { data, error } = await supabase
         .from('matches')
-        .select(
-          `
+        .select(`
           id,
           week,
           team1_score,
@@ -79,13 +79,12 @@ export function WeeklyStandingsTabs() {
           player2:player2(name),
           player3:player3(name),
           player4:player4(name)
-        `
-        )
+        `)
         .eq('week', week)
         .order('id', { ascending: true })
 
       if (!error && data) {
-        setMatches(data as MatchRow[])
+        setMatches(data as unknown as MatchRow[])
       } else {
         setMatches([])
       }
